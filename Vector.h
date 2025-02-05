@@ -10,6 +10,7 @@ public:
     Vector(float x, float y, float z) ;
 
     Vector operator+(const Vector& other) const;
+    Vector operator-() const;
     Vector operator-(const Vector& other) const;
     Vector operator*(float scalar) const;
     Vector operator/(float scalar) const;

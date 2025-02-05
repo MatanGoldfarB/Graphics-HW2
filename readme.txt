@@ -1,3 +1,5 @@
+https://github.com/MatanGoldfarB/Graphics-HW2
+
 To run the ray tracing, write "make" in the terminal and then ./raytracer <the file path>
 The program will save the outputs into a folder name "output".
 The output image name will be "my<the input file>.png" or "myAliasing<the input file>.png" for the aliasing case

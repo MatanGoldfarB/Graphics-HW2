@@ -151,6 +151,15 @@ void Scene::loadFromFile(const std::string& filename) {
                 }
                 break;
             }
+            case 'f': {
+                // Cylinder object
+                float cx, cy, cz, ax, ay, az, rad, h;
+                iss >> cx >> cy >> cz >> ax >> ay >> az >> rad >> h;
+                Vector center(cx, cy, cz);
+                Vector axis(ax, ay, az);
+                objects.push_back(new Cylinder(center, axis, rad, h, Vector(0, 0, 0), 0, false, false));
+                break;
+            }
             default: {
                 std::cerr << "Unknown line type: " << type << " in scene file." << std::endl;
                 break;

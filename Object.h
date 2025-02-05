@@ -44,4 +44,21 @@ public:
     void setColor(const Vector& newColors, const float newShiness) override;
 };
 
+class Cylinder : public Object {
+public:
+    Vector center;       // Center of the cylinder (middle of its height)
+    Vector axis;         // Unit vector along the cylinder's axis
+    float radius;        // Cylinder radius
+    float height;        // Cylinder height
+    Vector colors;       // Material color
+    float shininess;     // Material shininess
+    bool reflective;     // Reflectivity flag
+    bool transparent;    // Transparency flag
+
+    virtual ~Cylinder();
+    Cylinder(const Vector& center, const Vector& axis, float radius, float height, const Vector& colors, float shininess, bool reflective, bool transparent);
+    Intersection intersect(const Ray& ray)  override;
+    void setColor(const Vector& newColors, const float newShiness) override;
+};
+
 #endif // OBJECT_H
